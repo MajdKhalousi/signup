@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "260863360671",
+    "project_id": "aladdinslamp-befc1",
+    "storage_bucket": "aladdinslamp-befc1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260863360671:android:b1a11e2eb4778dc869ecaa",
+        "android_client_info": {
+          "package_name": "com.example.aladdinslamp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "260863360671-ne58e7geejni7e64nqbn3arbk3qk0irh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aladdinslamp",
+            "certificate_hash": "a2bc6bf5ed7248c9a478cc695e24b6ade71e63eb"
+          }
+        },
+        {
+          "client_id": "260863360671-4a3lh85cbd9nrvd6609dtsu3bsdmv1uh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl8uPncQhgAuycG1CumAdRZHgBjNB7VYc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "260863360671-4a3lh85cbd9nrvd6609dtsu3bsdmv1uh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "260863360671-isb9aahfmucerh4jlq0af8et4mqcpqhb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.aladdinslamp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

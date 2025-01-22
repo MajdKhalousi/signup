@@ -1,0 +1,12 @@
+flutter_native_splash:
+  color: "#FFFFFF"
+  color_dark: "#272727"
+  image: assets/logos/Gemini_Generated_Image_ty0n0dty0n0dty0n-removebg-preview.jpg
+  image_dark: assets/logos/Gemini_Generated_Image_ty0n0dty0n0dty0n-removebg-preview.jpg
+
+  android_12:
+    color: "#FFFFFF"
+    color_dark: "#272727"
+    image: assets/logos/Gemini_Generated_Image_ty0n0dty0n0dty0n-removebg-preview.jpg
+    image_dark: assets/logos/Gemini_Generated_Image_ty0n0dty0n0dty0n-removebg-preview.jpg
+  web: false
