@@ -1,7 +1,9 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../features/authentication/controllers/signup/signup_controller.dart';
+import '../features/authentication/controllers/signup_controller.dart';
+import 'constants/colors.dart';
+import 'constants/text_strings.dart';
 
 
 class TTermsAndConditionCheckbox extends StatelessWidget {
@@ -63,25 +65,5 @@ class TTermsAndConditionCheckbox extends StatelessWidget {
   }
 }
 
-class TColors {
-  static var white;
 
-  static var primary;
-}
-
-class TTexts {
-  static var iAgreeTo;
-
-  static var privacyPolicy;
-
-  static var and;
-
-  static var termsOfUse;
-}
-
-class TSizes {
-}
-
-class ThelperFunctions {
-  static isDarkMode(BuildContext context) {}
-}
+*/

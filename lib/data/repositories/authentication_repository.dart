@@ -4,7 +4,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-import '../../features/authentication/screens/signup_form.dart';
+import '../../features/authentication/screens/signup/signup.dart';
 class AuthenticationRepository extends GetxController {
 
   static AuthenticationRepository get instance => Get.find();

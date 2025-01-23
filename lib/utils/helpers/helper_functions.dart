@@ -1,14 +1,14 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:intl/intl.dart';
 
 class THelperFunctions {
   static Color? getColor(String value) {
-    /// Define your product specific colors here and it will match the attribute
+    /// Define your product specific colors here and it will match the attribute colors and show specific 🟠🟡🟢🔵🟣🟤
+
     if (value == 'Green') {
+      return Colors.green;
+    } else if (value == 'Green') {
       return Colors.green;
     } else if (value == 'Red') {
       return Colors.red;
