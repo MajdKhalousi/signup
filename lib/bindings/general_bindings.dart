@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 
-import '../features/authentication/controllers/signup_controller.dart';
+import '../features/authentication/controllers/signup/signup_controller.dart';
 import '../utils/network_manager.dart';
 
 class GeneralBindings extends Bindings {

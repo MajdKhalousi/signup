@@ -6,14 +6,14 @@ import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-
+import '../../../../utils/local_storage/storage_utility.dart';
 import '../../../../features/authentication/screens/login/login.dart';
 /*
 
 import '../../../../features/authentication/screens/signup/verify_email.dart';
 import '../../user/user_repository.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import '../../../../utils/local_storage/storage_utility.dart';
+
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
  */
@@ -28,6 +28,8 @@ import '../../../features/authentication/screens/widgets/onboarding/onboarding.d
 
 class AuthenticationRepository extends GetxController {
   static AuthenticationRepository get instance => Get.find();
+  //TODO  Get.offAll(() => const HomeMenu());
+  //TODO  Get.offAll(() => VerifyEmailScreen(email: getUserEmail));
 
   /// Variables
   final deviceStorage = GetStorage();
@@ -56,16 +58,15 @@ class AuthenticationRepository extends GetxController {
 
   /// Function to Show Relevant Screen
   screenRedirect(User? user) async {
-    /*
-
+/*
     if (user != null) {
       // User Logged-In: If email verified let the user go to Home Screen else to the Email Verification Screen
       if (user.emailVerified) {
         // Initialize User Specific Storage
         await TLocalStorage.init(user.uid);
-        Get.offAll(() => const HomeMenu());
+        //. Get.offAll(() => const HomeMenu());
       } else {
-        Get.offAll(() => VerifyEmailScreen(email: getUserEmail));
+        //Get.offAll(() => VerifyEmailScreen(email: getUserEmail));
       }
     } else {
       // Local Storage: User is new or Logged out! If new then write isFirstTime Local storage variable = true.
@@ -73,9 +74,7 @@ class AuthenticationRepository extends GetxController {
       deviceStorage.read('isFirstTime') != true ? Get.offAll(() => const LoginScreen()) : Get.offAll(() => const OnBoardingScreen());
     }
 
-
-     */
-
+ */
     deviceStorage.writeIfNull('isFirstTime', true);
     deviceStorage.read('isFirstTime') != true ? Get.offAll(() => const LoginScreen()) : Get.offAll(() => const OnBoardingScreen());
   }

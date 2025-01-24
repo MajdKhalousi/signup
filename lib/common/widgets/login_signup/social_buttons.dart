@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../features/authentication/controllers/login_in_controller.dart';
+import '../../../features/authentication/controllers/login/loginin_controller.dart';
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/image_strings.dart';
 import '../../../utils/constants/sizes.dart';
@@ -38,5 +38,8 @@ class TSocialButtons extends StatelessWidget {
       ],
     );
   }
+}
+
+class LoginController {
 }
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../utils/constants/colors.dart';
-import '../../utils/helpers/helper_functions.dart';
-import 'loading_animation.dart';
+import '../constants/colors.dart';
+import '../helpers/helper_functions.dart';
+import '../../common/widgets/loading_animation.dart';
 
 
 /// A utility class for managing a full-screen loading dialog.
