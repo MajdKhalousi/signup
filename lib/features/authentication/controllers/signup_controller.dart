@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 
 import '../../../common/widgets/full_screen_loader.dart';
 import '../../../common/widgets/loaders.dart';
-import '../../../data/repositories/authentication_repository.dart';
+import '../../../data/repositories/authentication/authentication_repository.dart';
 import '../../../data/repositories/user_repository.dart';
 import '../../../utils/network_manager.dart';
 import '../../personalization/models/user_model.dart';
@@ -34,6 +34,7 @@ class SignupController extends GetxController {
 
       // Check Internet Connectivity
       final isConnected = await NetworkManager.instance.isConnected();
+
       if (!isConnected) {
         // Remove Loader
         TFullScreenLoader.stopLoading();

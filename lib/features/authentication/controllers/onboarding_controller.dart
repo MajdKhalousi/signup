@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
+import 'package:get_storage/get_storage.dart';
 
 import '../screens/login/login.dart';
 
@@ -24,7 +25,9 @@ class OnBoardingController extends GetxController {
   /// Update Current Index & jump to next page
   void nextPage() {
     if (currentPageIndex.value == 2) {
-        Get.offAll(LoginScreen());
+      final getStorage = GetStorage();
+      getStorage.write('IsFirstTime', false);
+      Get.offAll(LoginScreen());
     } else {
       int page = currentPageIndex.value + 1;
       pageController.jumpToPage(page);

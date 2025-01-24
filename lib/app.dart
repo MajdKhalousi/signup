@@ -21,12 +21,17 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,  // Verwendet System-Theme (Hell/Dunkel)
       theme: TAppTheme.lightTheme,  // Helles Theme
       darkTheme: TAppTheme.darkTheme,  // Dunkles Theme
-      home: OnBoardingScreen(),
+
+
+      initialBinding: GeneralBindings(),  // Initialisiert Abhängigkeiten beim Start
+
+
+      /// Show Loader or Circular Progress Indicator meanwhile Authentication Repository is deciding to show relevant screen.
+      home: const Scaffold(backgroundColor: Colors.blue, body: Center (child: CircularProgressIndicator(color: Colors.white))),
       /*
 
 
 
-        initialBinding: GeneralBindings(),  // Initialisiert Abhängigkeiten beim Start
 
         theme: ThemeData(
         // This works for code too, not just values: Most code changes can be
@@ -35,10 +40,9 @@ class App extends StatelessWidget {
         useMaterial3: true,
         ),
 
-        /// Show Loader or Circular Progress Indicator meanwhile Authentication Repository is deciding to show relevant screen.
-      home: TSignupForm(),
+
 */
-      //const Scaffold(backgroundColor: Colors.deepOrange, body: Center (child: CircularProgressIndicator(color: Colors.white)))
+      //
 
     );
   }
