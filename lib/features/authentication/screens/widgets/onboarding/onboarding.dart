@@ -31,17 +31,17 @@ class OnBoardingScreen extends StatelessWidget {
               OnBoardingPage(
                 image: TImages.onBoardingImage1,
                 title: TTexts.onBoardingTitle1,
-                subTitle: TTexts.onBoardingSubtitle1,
+                subTitle: TTexts.onBoardingSubTitle1,
               ), // Column
               OnBoardingPage(
                 image: TImages.onBoardingImage2,
                 title: TTexts.onBoardingTitle2,
-                subTitle: TTexts.onBoardingSubtitle2,
+                subTitle: TTexts.onBoardingSubTitle2,
               ), // Column
               OnBoardingPage(
                 image: TImages.onBoardingImage3,
                 title: TTexts.onBoardingTitle3,
-                subTitle: TTexts.onBoardingSubtitle3,
+                subTitle: TTexts.onBoardingSubTitle3,
               ), // Column
             ],
           ),

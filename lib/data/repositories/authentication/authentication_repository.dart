@@ -23,6 +23,7 @@ import '../../../../utils/exceptions/firebase_exceptions.dart';
 import '../../../../utils/exceptions/format_exceptions.dart';
 import '../../../../utils/exceptions/platform_exceptions.dart';
 
+import '../../../features/authentication/screens/signup/verify_email.dart';
 import '../../../features/authentication/screens/widgets/onboarding/onboarding.dart';
 
 
@@ -58,25 +59,29 @@ class AuthenticationRepository extends GetxController {
 
   /// Function to Show Relevant Screen
   screenRedirect(User? user) async {
-/*
+
     if (user != null) {
       // User Logged-In: If email verified let the user go to Home Screen else to the Email Verification Screen
-      if (user.emailVerified) {
+      /*if (user.emailVerified) {
         // Initialize User Specific Storage
         await TLocalStorage.init(user.uid);
-        //. Get.offAll(() => const HomeMenu());
+         Get.offAll(() => const HomeMenu());
       } else {
-        //Get.offAll(() => VerifyEmailScreen(email: getUserEmail));
+        Get.offAll(() => VerifyEmailScreen(email: getUserEmail));
       }
+
+       */
+      Get.offAll(() => VerifyEmailScreen(email: getUserEmail));
+
     } else {
       // Local Storage: User is new or Logged out! If new then write isFirstTime Local storage variable = true.
       deviceStorage.writeIfNull('isFirstTime', true);
       deviceStorage.read('isFirstTime') != true ? Get.offAll(() => const LoginScreen()) : Get.offAll(() => const OnBoardingScreen());
     }
 
- */
-    deviceStorage.writeIfNull('isFirstTime', true);
-    deviceStorage.read('isFirstTime') != true ? Get.offAll(() => const LoginScreen()) : Get.offAll(() => const OnBoardingScreen());
+
+
+
   }
 
   /* ---------------------------- Email & Password sign-in ---------------------------------*/
@@ -136,6 +141,8 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
+ */
+
   /// [EmailVerification] - MAIL VERIFICATION
   Future<void> sendEmailVerification() async {
     try {
@@ -152,7 +159,7 @@ class AuthenticationRepository extends GetxController {
       throw 'Something went wrong. Please try again';
     }
   }
-
+/*
   /// [EmailAuthentication] - FORGET PASSWORD
   Future<void> sendPasswordResetEmail(email) async {
     try {
@@ -228,13 +235,15 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
+ */
+
   /* ---------------------------- ./end Federated identity & social sign-in ---------------------------------*/
 
   /// [LogoutUser] - Valid for any authentication.
   Future<void> logout() async {
     try {
-      await GoogleSignIn().signOut();
-      await FacebookAuth.instance.logOut();
+      //. await GoogleSignIn().signOut();
+      //. await FacebookAuth.instance.logOut();
       await FirebaseAuth.instance.signOut();
       Get.offAll(() => const LoginScreen());
     } on FirebaseAuthException catch (e) {
@@ -249,7 +258,7 @@ class AuthenticationRepository extends GetxController {
       throw 'Something went wrong. Please try again';
     }
   }
-
+/*
   /// DELETE USER - Remove user Auth and Firestore Account.
   Future<void> deleteAccount() async {
     try {

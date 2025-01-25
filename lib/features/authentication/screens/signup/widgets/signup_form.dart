@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../../data/repositories/authentication/authentication_repository.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
 import '../../../../../utils/terms_conditions_checkbox.dart';
@@ -102,7 +103,7 @@ class TSignupForm extends StatelessWidget {
           /// Sign Up Button
           SizedBox(
             width: double.infinity,
-            child: ElevatedButton(onPressed: () => controller.signup(), child: const Text(TTexts.createAccount)),
+            child: ElevatedButton(onPressed: () =>controller.signup(), child: const Text(TTexts.createAccount)),
           ),
         ],
       ),

@@ -1,12 +1,12 @@
 flutter_native_splash:
   color: "#FFFFFF"
   color_dark: "#272727"
-  image: assets/logos/Gemini_Generated_Image_ty0n0dty0n0dty0n-removebg-preview.jpg
-  image_dark: assets/logos/Gemini_Generated_Image_ty0n0dty0n0dty0n-removebg-preview.jpg
+  image: assets/logos/baba-code-logo.png
+  image_dark: assets/logos/baba-code-logo.png
 
   android_12:
     color: "#FFFFFF"
     color_dark: "#272727"
-    image: assets/logos/Gemini_Generated_Image_ty0n0dty0n0dty0n-removebg-preview.jpg
-    image_dark: assets/logos/Gemini_Generated_Image_ty0n0dty0n0dty0n-removebg-preview.jpg
+    image: assets/logos/baba-code-logo.png
+    image_dark: assets/logos/baba-code-logo.png
   web: false
