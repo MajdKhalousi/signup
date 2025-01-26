@@ -1,4 +1,4 @@
-/*import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -76,7 +76,7 @@ class TCloudHelperFunctions {
   static Future<String> getURLFromURI(String url) async {
     try {
       if (url.isEmpty) return '';
-      //final ref = FirebaseStorage.instance.refFromURL(url);
+      final ref = FirebaseStorage.instance.refFromURL(url);
       final downloadUrl = await ref.getDownloadURL();
       return downloadUrl;
     } on FirebaseException catch (e) {
@@ -91,4 +91,3 @@ class TCloudHelperFunctions {
 
 }
 
- */

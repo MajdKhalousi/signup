@@ -1,18 +1,16 @@
-/// LIST OF Enums
-/// They cannot be created inside a class.
+/* --
+      LIST OF Enums
+      They cannot be created inside a class.
+-- */
+
+enum AppRole { admin, user }
 
 enum TextSizes { small, medium, large }
 
-enum OrderStatus { processing, shipped, delivered }
+enum ProductType { single, variable }
 
-enum PaymentMethods {
-  paypal,
-  googlePay,
-  applePay,
-  visa,
-  masterCard,
-  creditCard,
-  paystack,
-  razorPay,
-  paytm
-}
+enum OrderStatus { pending, processing, shipped, delivered, cancelled }
+
+enum MediaCategory { folders, banners, brands, categories, products, users }
+
+enum PaymentMethods { paypal, googlePay, applePay, visa, masterCard, creditCard, paystack, razorPay, paytm }

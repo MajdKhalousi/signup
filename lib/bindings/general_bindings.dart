@@ -1,28 +1,24 @@
 import 'package:get/get.dart';
-
-
-import '../features/authentication/controllers/signup/signup_controller.dart';
-import '../utils/network_manager.dart';
+import '../features/personalization/controllers/address_controller.dart';
+import '../features/personalization/controllers/settings_controller.dart';
+import '../features/shop/controllers/product/checkout_controller.dart';
+import '../features/shop/controllers/product/images_controller.dart';
+import '../features/shop/controllers/product/variation_controller.dart';
+import '../utils/helpers/network_manager.dart';
 
 class GeneralBindings extends Bindings {
   @override
   void dependencies() {
+    /// -- Core
     Get.put(NetworkManager());
 
-/*
-    // Hier werden die Abhängigkeiten registriert
+    /// -- Product
+    Get.put(CheckoutController());
+    Get.put(VariationController());
+    Get.put(ImagesController());
 
-    // Registrierung des SignupControllers als Singleton
-    Get.lazyPut<SignupController>(() => SignupController());
-
-    // Registrierung des AuthControllers als Singleton
-    Get.lazyPut<AuthController>(() => AuthController());
-
-    // Netzwerkservice initialisieren
-    Get.lazyPut<NetworkService>(() => NetworkService(), fenix: true);
-
-    // Falls du andere Services oder Controller benötigst, hier hinzufügen
-
- */
+    /// -- Other
+    Get.put(AddressController());
+    Get.lazyPut(() => SettingsController(), fenix: true);
   }
 }

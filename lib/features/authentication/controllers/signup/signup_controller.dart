@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import '../../../../utils/popups/full_screen_loader.dart';
 import '../../../../utils/popups/loaders.dart';
 import '../../../../data/repositories/authentication/authentication_repository.dart';
-import '../../../../data/repositories/user_repository.dart';
+import '../../../../data/repositories/user/user_repository.dart';
 import '../../../../utils/network_manager.dart';
 import '../../../personalization/models/user_model.dart';
 

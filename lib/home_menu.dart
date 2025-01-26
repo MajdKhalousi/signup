@@ -1,17 +1,14 @@
-/*
 import 'package:aladdinslamp/utils/constants/colors.dart';
-
 import 'package:aladdinslamp/utils/helpers/helper_functions.dart';
-import 'package:cwt_ecommerce_app/utils/constants/colors.dart';
-import 'package:cwt_ecommerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
+import 'features/personalization/screens/setting/screens/favourites/favourite.dart';
+import 'features/personalization/screens/setting/screens/home/home.dart';
+import 'features/personalization/screens/setting/screens/store/store.dart';
 import 'features/personalization/screens/setting/settings.dart';
-import 'features/shop/screens/favourites/favourite.dart';
-import 'features/shop/screens/home/home.dart';
-import 'features/shop/screens/store/store.dart';
+
 
 class HomeMenu extends StatelessWidget {
   const HomeMenu({super.key});
@@ -22,7 +19,7 @@ class HomeMenu extends StatelessWidget {
     return Scaffold(
       extendBody: true,
       bottomNavigationBar: Obx(
-            () => NavigationBar(
+        () => NavigationBar(
           height: 80,
           animationDuration: const Duration(seconds: 3),
           selectedIndex: controller.selectedMenu.value,
@@ -50,4 +47,3 @@ class AppScreenController extends GetxController {
 
   final screens = [const HomeScreen(), const StoreScreen(), const FavouriteScreen(), const SettingsScreen()];
 }
- */

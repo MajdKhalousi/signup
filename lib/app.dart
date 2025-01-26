@@ -1,3 +1,4 @@
+import 'package:aladdinslamp/routes/app_routes.dart';
 import 'package:aladdinslamp/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -22,27 +23,12 @@ class App extends StatelessWidget {
       theme: TAppTheme.lightTheme,  // Helles Theme
       darkTheme: TAppTheme.darkTheme,  // Dunkles Theme
 
-
       initialBinding: GeneralBindings(),  // Initialisiert Abhängigkeiten beim Start
-
+      getPages: AppRoutes.pages,
 
       /// Show Loader or Circular Progress Indicator meanwhile Authentication Repository is deciding to show relevant screen.
       home: const Scaffold(backgroundColor: Colors.blue, body: Center (child: CircularProgressIndicator(color: Colors.white))),
-      /*
 
-
-
-
-        theme: ThemeData(
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-        ),
-
-
-*/
-      //
 
     );
   }

@@ -1,17 +1,25 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../../../utils/formatter.dart';
+import '../../../utils/constants/enums.dart';
+import '../../../utils/formatters/formatter.dart';
+import '../../shop/models/cart_model.dart';
+import 'address_model.dart';
 
 /// Model class representing user data.
 class UserModel {
   // Keep those values final which you do not want to update
   final String id;
-  final String firstName;
-  final String lastName;
+  String firstName;
+  String lastName;
   final String username;
   final String email;
-  final String phoneNumber;
-  final String profilePicture;
+  String phoneNumber;
+  String profilePicture;
+  final CartModel? cart;
+  final List<AddressModel>? addresses;
+  AppRole role;
+  DateTime? createdAt;
+  DateTime? updatedAt;
 
   /// Constructor for UserModel.
   UserModel({
@@ -22,6 +30,11 @@ class UserModel {
     required this.email,
     required this.phoneNumber,
     required this.profilePicture,
+    this.cart,
+    this.addresses,
+    this.role = AppRole.user,
+    this.createdAt,
+    this.updatedAt,
   });
 
   /// Helper function to get the full name.
@@ -31,10 +44,10 @@ class UserModel {
   String get formattedPhoneNo => TFormatter.formatPhoneNumber(phoneNumber);
 
   /// Static function to split full name into first and last name.
-  static List<String> nameParts(String fullName) => fullName.split(" ");
+  static List<String> nameParts(fullName) => fullName.split(" ");
 
   /// Static function to generate a username from the full name.
-  static String generateUsername(String fullName) {
+  static String generateUsername(fullName) {
     List<String> nameParts = fullName.split(" ");
     String firstName = nameParts[0].toLowerCase();
     String lastName = nameParts.length > 1 ? nameParts[1].toLowerCase() : "";
@@ -45,15 +58,7 @@ class UserModel {
   }
 
   /// Static function to create an empty user model.
-  static UserModel empty() => UserModel(
-    id: '',
-    firstName: '',
-    lastName: '',
-    username: '',
-    email: '',
-    phoneNumber: '',
-    profilePicture: '',
-  );
+  static UserModel empty() => UserModel(id: '', firstName: '', lastName: '', username: '', email: '', phoneNumber: '', profilePicture: '');
 
   /// Convert model to JSON structure for storing data in Firebase.
   Map<String, dynamic> toJson() {
@@ -64,6 +69,9 @@ class UserModel {
       'Email': email,
       'PhoneNumber': phoneNumber,
       'ProfilePicture': profilePicture,
+      'Role': AppRole.user.name,
+      'CreatedAt': createdAt = DateTime.now(),
+      'UpdatedAt': DateTime.now(),
     };
   }
 
@@ -81,7 +89,7 @@ class UserModel {
         profilePicture: data['ProfilePicture'] ?? '',
       );
     } else {
-      throw Exception('Document data is null');
+      return UserModel.empty();
     }
   }
 }

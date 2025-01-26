@@ -1,4 +1,4 @@
-/*import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
@@ -6,7 +6,6 @@ import 'package:image_picker/image_picker.dart';
 import '../../../common/widgets/loaders/circular_loader.dart';
 import '../../../data/repositories/authentication/authentication_repository.dart';
 import '../../../data/repositories/user/user_repository.dart';
-import '../../../data/repositories/user_repository.dart';
 import '../../../utils/constants/image_strings.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/helpers/network_manager.dart';
@@ -153,7 +152,7 @@ class UserController extends GetxController {
           TFullScreenLoader.stopLoading();
           Get.offAll(() => const LoginScreen());
         } else if (provider == 'facebook.com') {
-          await auth.signInWithFacebook();
+          //await auth.signInWithFacebook();
           await auth.deleteAccount();
           TFullScreenLoader.stopLoading();
           Get.offAll(() => const LoginScreen());
@@ -230,4 +229,3 @@ class UserController extends GetxController {
     }
   }
 }
-*/

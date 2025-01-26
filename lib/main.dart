@@ -12,16 +12,16 @@ Future<void> main() async {
   /// Widgets Binding
   final WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
 
-  //-- GetX Local Storage
+  /// -- GetX Local Storage
   await GetStorage.init();
 
-  // Await Splash until other items Load
+  /// -- Await Splash until other items Load
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-
+  /// -- Initialize Firebase & Authentication Repository
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform).then( (FirebaseApp value) => Get.put(AuthenticationRepository()));
 
-
+  /// -- Main App Starts here...
   runApp(const App());
 }
 

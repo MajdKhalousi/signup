@@ -1,4 +1,4 @@
-import 'package:aladdinslamp/data/repositories/user_repository.dart';
+import 'package:aladdinslamp/data/repositories/user/user_repository.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -8,16 +8,15 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import '../../../../utils/local_storage/storage_utility.dart';
 import '../../../../features/authentication/screens/login/login.dart';
-/*
+
 
 import '../../../../features/authentication/screens/signup/verify_email.dart';
-import '../../user/user_repository.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
- */
-import '../../../../home_menu.dart';
+
+  import '../../../../home_menu.dart';
 import '../../../../utils/exceptions/firebase_auth_exceptions.dart';
 import '../../../../utils/exceptions/firebase_exceptions.dart';
 import '../../../../utils/exceptions/format_exceptions.dart';
@@ -62,7 +61,7 @@ class AuthenticationRepository extends GetxController {
 
     if (user != null) {
       // User Logged-In: If email verified let the user go to Home Screen else to the Email Verification Screen
-      /*if (user.emailVerified) {
+      if (user.emailVerified) {
         // Initialize User Specific Storage
         await TLocalStorage.init(user.uid);
          Get.offAll(() => const HomeMenu());
@@ -70,8 +69,8 @@ class AuthenticationRepository extends GetxController {
         Get.offAll(() => VerifyEmailScreen(email: getUserEmail));
       }
 
-       */
-      Get.offAll(() => VerifyEmailScreen(email: getUserEmail));
+
+
 
     } else {
       // Local Storage: User is new or Logged out! If new then write isFirstTime Local storage variable = true.
@@ -119,7 +118,7 @@ class AuthenticationRepository extends GetxController {
       throw 'Something went wrong. Please try again';
     }
   }
-/*
+
   /// [ReAuthenticate] - ReAuthenticate User
   Future<void> reAuthenticateWithEmailAndPassword(String email, String password) async {
     try {
@@ -141,7 +140,7 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
- */
+
 
   /// [EmailVerification] - MAIL VERIFICATION
   Future<void> sendEmailVerification() async {
@@ -159,7 +158,7 @@ class AuthenticationRepository extends GetxController {
       throw 'Something went wrong. Please try again';
     }
   }
-/*
+
   /// [EmailAuthentication] - FORGET PASSWORD
   Future<void> sendPasswordResetEmail(email) async {
     try {
@@ -209,7 +208,7 @@ class AuthenticationRepository extends GetxController {
       return null;
     }
   }
-
+/*
   ///[FacebookAuthentication] - FACEBOOK
   Future<UserCredential> signInWithFacebook() async {
     try {
@@ -258,7 +257,7 @@ class AuthenticationRepository extends GetxController {
       throw 'Something went wrong. Please try again';
     }
   }
-/*
+
   /// DELETE USER - Remove user Auth and Firestore Account.
   Future<void> deleteAccount() async {
     try {
@@ -275,5 +274,5 @@ class AuthenticationRepository extends GetxController {
     } catch (e) {
       throw 'Something went wrong. Please try again';
     }
-  }*/
+  }
 }
