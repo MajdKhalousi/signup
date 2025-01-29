@@ -1,13 +1,14 @@
 
+import 'package:aladdinslamp/features/authentication/screens/onboarding/widgets/on_boarding_dot_navigation.dart';
+import 'package:aladdinslamp/features/authentication/screens/onboarding/widgets/on_boarding_next_button.dart';
+import 'package:aladdinslamp/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
+import 'package:aladdinslamp/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../../../utils/constants/image_strings.dart';
-import '../../../../../utils/constants/text_strings.dart';
-import '../../../controllers/onboarding/onboarding_controller.dart';
-import '../../onboarding/on_boarding_dot_navigation.dart';
-import '../../onboarding/on_boarding_next_button.dart';
-import '../../onboarding/onboarding_skip.dart';
-import '../../onboarding/onboarding_page.dart';
+import '../../../../utils/constants/image_strings.dart';
+import '../../../../utils/constants/text_strings.dart';
+import '../../controllers/onboarding_controller.dart';
+
 
 
 

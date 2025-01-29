@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-import 'features/authentication/controllers/signup/signup_controller.dart';
+import 'features/authentication/controllers/signup_controller.dart';
 
 
 
-class x extends StatelessWidget {
+class X extends StatelessWidget {
   //const TSignupForm({super.key});
 
 

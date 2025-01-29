@@ -2,28 +2,21 @@ import 'package:aladdinslamp/data/repositories/user/user_repository.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import '../../../../utils/local_storage/storage_utility.dart';
 import '../../../../features/authentication/screens/login/login.dart';
-
-
 import '../../../../features/authentication/screens/signup/verify_email.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
-
-
-  import '../../../../home_menu.dart';
+import '../../../../home_menu.dart';
 import '../../../../utils/exceptions/firebase_auth_exceptions.dart';
 import '../../../../utils/exceptions/firebase_exceptions.dart';
 import '../../../../utils/exceptions/format_exceptions.dart';
 import '../../../../utils/exceptions/platform_exceptions.dart';
-
+import '../../../features/authentication/screens/onboarding/onboarding.dart';
 import '../../../features/authentication/screens/signup/verify_email.dart';
-import '../../../features/authentication/screens/widgets/onboarding/onboarding.dart';
 
 
 class AuthenticationRepository extends GetxController {

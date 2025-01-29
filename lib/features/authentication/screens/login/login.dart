@@ -5,8 +5,8 @@ import '../../../../common/widgets/login_signup/form_divider.dart';
 import '../../../../common/widgets/login_signup/social_buttons.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/constants/text_strings.dart';
-import 'login_form.dart';
-import 'login_header.dart';
+import 'widgets/login_form.dart';
+import 'widgets/login_header.dart';
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 

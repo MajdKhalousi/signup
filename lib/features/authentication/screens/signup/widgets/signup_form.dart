@@ -8,8 +8,8 @@ import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
 import '../../../../../utils/terms_conditions_checkbox.dart';
 import '../../../../../utils/validators/validation.dart';
-import '../../../controllers/signup/signup_controller.dart';
-import '../../../controllers/signup/signup_controller.dart';
+import '../../../controllers/signup_controller.dart';
+import '../../../controllers/signup_controller.dart';
 //import 'terms_conditions_checkbox.dart';
 
 class TSignupForm extends StatelessWidget {

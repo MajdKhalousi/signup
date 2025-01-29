@@ -1,8 +1,9 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import '../features/authentication/screens/login/login.dart';
+import '../features/authentication/screens/onboarding/onboarding.dart';
+import '../features/authentication/screens/password_configuration/forget_password.dart';
 import '../features/authentication/screens/signup/signup.dart';
 import '../features/authentication/screens/signup/verify_email.dart';
-import '../features/authentication/screens/widgets/onboarding/onboarding.dart';
 import '../features/personalization/screens/address/address.dart';
 import '../features/personalization/screens/profile/profile.dart';
 import '../features/personalization/screens/setting/screens/cart/cart.dart';
@@ -32,7 +33,7 @@ class AppRoutes {
     GetPage(name: TRoutes.signup, page: () => const SignupScreen()),
     GetPage(name: TRoutes.verifyEmail, page: () => const VerifyEmailScreen()),
     GetPage(name: TRoutes.signIn, page: () => const LoginScreen()),
-    //GetPage(name: TRoutes.forgetPassword, page: () => const ForgetPasswordScreen()),
+    GetPage(name: TRoutes.forgetPassword, page: () => const ForgetPasswordScreen()),
     GetPage(name: TRoutes.onBoarding, page: () => const OnBoardingScreen()),
     // Add more GetPage entries as needed
   ];

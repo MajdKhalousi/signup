@@ -2,12 +2,8 @@ import 'package:aladdinslamp/routes/app_routes.dart';
 import 'package:aladdinslamp/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-
 import 'bindings/general_bindings.dart';
-import 'enter_page.dart';
-import 'features/authentication/screens/widgets/onboarding/onboarding.dart';
-import 'features/authentication/screens/signup/signup.dart';
-import 'main.dart';
+
 
 class App extends StatelessWidget {
   const App({super.key});

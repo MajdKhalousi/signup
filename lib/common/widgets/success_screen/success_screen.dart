@@ -11,7 +11,6 @@ import '../../styles/spacing_styles.dart';
 
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({super.key, required this.image, required this.title, required this.subTitle, required this.onPressed});
-  //TODO Buttons
   final String image, title, subTitle;
   final VoidCallback onPressed;
 
@@ -33,23 +32,17 @@ class SuccessScreen extends StatelessWidget {
               Text(subTitle, style: Theme.of(context).textTheme.labelMedium, textAlign: TextAlign.center),
               const SizedBox(height: TSizes.spaceBtwSections),
 
-              SizedBox(
-                width: double.infinity,
-                child: OutlinedButton(
-                  onPressed: () => Get.to(() => LoginScreen()),
-                  child: const Text(TTexts.createAccount),
-                ),
-              ),
+
 
 
               /// Buttons
-              /*SizedBox(
+              SizedBox(
                 width: double.infinity,
                 //child: ElevatedButton(onPressed: onPressed, child: const Text(TTexts.tContinue)),
                 child: ElevatedButton(onPressed: onPressed, child: const Text(TTexts.tContinue)),
               ),
 
-               */
+
             ],
           ),
         ),
